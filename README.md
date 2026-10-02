@@ -8,6 +8,7 @@ A single-page, responsive resume built with plain HTML and CSS (no frameworks).
 
 ## Highlights
 - **[tx-guard](https://github.com/jeffreyesdavid/tx-guard):** a Python tool that catches crypto scams and wallet-draining transactions before they're signed
+- **4+ years of regulated-industry operations:** vendor due diligence for 100+ brands, leading teams of up to 26
 - More security work: [cybersecurity-journey](https://github.com/jeffreyesdavid/cybersecurity-journey)
 
 ## Features
