@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeffrey David | Fraud & Security Analyst</title>
+<meta name="description" content="Resume of Jeffrey David: aspiring fraud and security analyst with a background in regulated-industry operations and compliance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #12161f;
+    --muted: #586174;
+    --line: #e2e5eb;
+    --accent: #1f6f5c;
+    --accent-soft: #e5f2ee;
+    --chip: #eef0f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --card: #161b22;
+      --text: #e8ebf0;
+      --muted: #9aa4b2;
+      --line: #2a313c;
+      --accent: #5cc2a6;
+      --accent-soft: #15302a;
+      --chip: #20262f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  header.top { padding: 48px 0 28px; }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; color: var(--accent); letter-spacing: .04em;
+  }
+  h1 { font-size: clamp(32px, 6vw, 44px); margin: 6px 0 4px; letter-spacing: -.02em; }
+  .role { font-size: 19px; color: var(--muted); margin: 0 0 18px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 15px; color: var(--muted); }
+  .contact a { color: var(--text); font-weight: 500; }
+
+  nav.tabs {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.tabs .wrap { display: flex; gap: 4px; overflow-x: auto; padding-top: 6px; padding-bottom: 6px; align-items: center; }
+  nav.tabs a {
+    color: var(--muted); font-weight: 500; font-size: 15px;
+    padding: 8px 12px; border-radius: 8px; white-space: nowrap;
+  }
+  nav.tabs a:hover, nav.tabs a.active { background: var(--chip); color: var(--text); text-decoration: none; }
+  nav.tabs button {
+    margin-left: auto; font: inherit; font-size: 14px; font-weight: 600;
+    border: 1px solid var(--line); background: var(--card); color: var(--text);
+    padding: 7px 12px; border-radius: 8px; cursor: pointer; white-space: nowrap;
+  }
+
+  section { padding: 36px 0 8px; scroll-margin-top: 56px; }
+  h2 { font-size: 22px; margin: 0 0 16px; letter-spacing: -.01em; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 14px;
+  }
+  .summary { font-size: 17px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 16px; }
+  .stat { background: var(--accent-soft); border-radius: 10px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 26px; color: var(--accent); line-height: 1.1; }
+  .stat span { font-size: 14px; color: var(--muted); }
+
+  .item-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+  .item-head h3 { font-size: 18px; margin: 0; }
+  .meta { font-size: 14px; color: var(--muted); }
+  .org { color: var(--muted); font-size: 15px; margin: 2px 0 10px; }
+  ul { margin: 8px 0 0; padding-left: 20px; }
+  li { margin: 5px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .tag {
+    font-size: 13px; background: var(--chip); color: var(--text);
+    padding: 3px 10px; border-radius: 999px;
+  }
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .skills h3 { font-size: 15px; margin: 0 0 4px; color: var(--accent); }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+
+  @media print {
+    nav.tabs, footer { display: none; }
+    body { background: #fff; color: #000; font-size: 12px; }
+    header.top { padding-top: 0; }
+    section { padding-top: 14px; }
+    .card { border: none; padding: 0 0 10px; break-inside: avoid; }
+    .stat { background: none; border: 1px solid #ccc; }
+    a { color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">// fraud &amp; security analyst</div>
+    <h1>Jeffrey David</h1>
+    <p class="role">Catching scams before they cost people money</p>
+    <div class="contact">
+      <span>Apple Valley, CA</span>
+      <a href="mailto:jeffreyisdavid@gmail.com">jeffreyisdavid@gmail.com</a>
+      <a href="https://github.com/jeffreyesdavid">GitHub</a>
+      <a href="https://www.linkedin.com/in/jeffreyisdavid/">LinkedIn</a>
+      <a href="https://tryhackme.com/p/gahtomahiko">TryHackMe</a>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="wrap">
+    <a href="#summary">Summary</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <button type="button" onclick="window.print()">Save as PDF</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <div class="card">
+      <p class="summary" style="margin:0">
+        Aspiring fraud and security analyst with 4+ years of operations leadership in a heavily regulated industry,
+        where I verified licenses and compliance paperwork for 100+ vendor brands and led teams of up to 26.
+        I'm now building hands-on security tools, including <a href="https://github.com/jeffreyesdavid/tx-guard">tx-guard</a>,
+        which detects crypto scams and wallet-draining transactions before they're signed.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>100+</b><span>vendor brands verified for compliance</span></div>
+        <div class="stat"><b>16 → 26</b><span>driver team scaled (+63%)</span></div>
+        <div class="stat"><b>2,500+</b><span>scam addresses checked by tx-guard</span></div>
+        <div class="stat"><b>37</b><span>automated tests in tx-guard</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Security Projects</h2>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/tx-guard">tx-guard</a>: Crypto Transaction Safety Checker</h3>
+        <span class="meta">2026</span>
+      </div>
+      <ul>
+        <li>Python command-line tool that checks a crypto transaction <strong>before</strong> it is signed and explains the risk in plain English.</li>
+        <li>Matches every address in a transaction against 2,500+ known scam addresses from a public threat-intelligence list.</li>
+        <li>Detects the most common wallet-draining tricks: unlimited token approvals, NFT "approve all," and <code>permit</code> signatures.</li>
+        <li>Simulates the transaction on the live Ethereum network to show exact losses (e.g. "you lose 500 USDC") and surface approvals hidden inside other calls.</li>
+        <li>Covered by 37 automated tests; validates malformed input instead of silently misreading it.</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Ethereum</span><span class="tag">Threat detection</span><span class="tag">REST / JSON-RPC APIs</span><span class="tag">Unit testing</span></div>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/cybersecurity-journey/blob/main/scripts/pwcheck.py">Password Breach Checker</a></h3>
+        <span class="meta">2026</span>
+      </div>
+      <ul>
+        <li>Python script that checks passwords against the Have I Been Pwned breach database.</li>
+        <li>Uses k-anonymity, so only a partial hash is sent and the real password never leaves the machine.</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Hashing</span><span class="tag">Privacy by design</span></div>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/cybersecurity-journey/blob/main/writeups/01-personal-account-incident-response.md">Incident Response: Google Account Alert</a></h3>
+        <span class="meta">2026</span>
+      </div>
+      <ul>
+        <li>Investigated a critical security alert on my own account: rotated credentials, audited active sessions, and checked for mailbox persistence.</li>
+        <li>Documented the triage and remediation steps in a written incident report.</li>
+        <li>Practiced credential hygiene: scoped a least-privilege access token to a single repository, then revoked and rotated it immediately after accidental exposure.</li>
+      </ul>
+      <div class="tags"><span class="tag">Incident response</span><span class="tag">MFA</span><span class="tag">Least privilege</span></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="card">
+      <div class="item-head">
+        <h3>Packaging Department Manager / Brand Supervisor</h3>
+        <span class="meta">2023 – 2024</span>
+      </div>
+      <div class="org">White Ray · Adelanto, CA</div>
+      <ul>
+        <li>Hired and led a team of 6 to ensure every product was packaged and labeled in line with state regulations.</li>
+        <li>Provided direct operational support to the CEO, CFO, and Director of Cultivation on planning and oversight.</li>
+        <li>Acted as liaison between the executive team and department managers to streamline workflows.</li>
+        <li>Built the company's brand identity and social media presence from scratch ahead of a planned delivery launch.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3>Cultivator</h3>
+        <span class="meta">2021 – 2023</span>
+      </div>
+      <div class="org">Yellow Dream Farm · Adelanto, CA</div>
+      <ul>
+        <li>Handled every stage of commercial cultivation, from cloning and propagation to harvest.</li>
+        <li>Monitored environmental controls and ran integrated pest management across a multi-room weekly harvest rotation.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3>Operations &amp; Dispatch Manager</h3>
+        <span class="meta">2020 – 2021</span>
+      </div>
+      <div class="org">SoCal Green Meds · Hesperia, CA</div>
+      <ul>
+        <li>Promoted from Dispatcher to run all delivery and dispatch logistics for a high-volume operation.</li>
+        <li><strong>Vendor due diligence:</strong> verified licenses, Certificates of Analysis, and required paperwork for 100+ brands before their products reached customers.</li>
+        <li>Scaled the active driver team from 16 to 26 while optimizing routes and performance.</li>
+        <li>Oversaw daily inventory and secured exclusive brand partnerships.</li>
+        <li>Contributed to the company winning the "Best of the Desert" award in 2021.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3>Owner / Vendor</h3>
+        <span class="meta">2024</span>
+      </div>
+      <div class="org">Nostalgia Vault LA · Los Angeles, CA</div>
+      <ul>
+        <li>Ran a vintage apparel business: sourcing, inventory management, pricing, and direct sales at pop-up markets.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card skills">
+      <div>
+        <h3>Security</h3>
+        Scam and fraud pattern detection · Transaction risk analysis · Incident response · Credential hygiene and least privilege · Threat-intelligence lists
+      </div>
+      <div>
+        <h3>Technical</h3>
+        Python · Git and GitHub · REST and JSON-RPC APIs · Ethereum fundamentals · Automated testing · Command line
+      </div>
+      <div>
+        <h3>Operations &amp; Compliance</h3>
+        Vendor due diligence · Regulatory compliance · Team leadership · Logistics · Inventory management · Executive support
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Certifications</h2>
+    <div class="card">
+      <div class="item-head"><h3>CompTIA Security+</h3><span class="meta">In progress</span></div>
+    </div>
+    <div class="card">
+      <div class="item-head"><h3>Google Analytics · Google Ads · Meta Blueprint · HubSpot</h3><span class="meta">Completed</span></div>
+    </div>
+    <div class="card">
+      <div class="item-head"><h3>Music Production Program</h3></div>
+      <div class="org" style="margin-bottom:0">Los Angeles Film School · Los Angeles, CA</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><a href="https://github.com/jeffreyesdavid/interactive-resume">Source on GitHub</a></div>
+</footer>
+
+<script>
+  // Highlight the nav link for the section currently on screen.
+  const links = document.querySelectorAll('nav.tabs a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('main section').forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
