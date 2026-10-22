@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jeffrey David | Fraud & Security Analyst</title>
-<meta name="description" content="Resume of Jeffrey David: aspiring fraud and security analyst with a background in regulated-industry operations and compliance.">
+<meta name="description" content="Resume of Jeffrey David: aspiring fraud, SOC and security analyst who builds open-source detection tools, with a background in regulated-industry operations and compliance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -102,12 +102,28 @@
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
 
   @media print {
-    nav.tabs, footer { display: none; }
-    body { background: #fff; color: #000; font-size: 12px; }
-    header.top { padding-top: 0; }
-    section { padding-top: 14px; }
-    .card { border: none; padding: 0 0 10px; break-inside: avoid; }
-    .stat { background: none; border: 1px solid #ccc; }
+    @page { margin: 0.45in 0.55in; }
+    nav.tabs, footer, .tags, .stats { display: none; }
+    body { background: #fff; color: #000; font-size: 10.5px; line-height: 1.38; }
+    header.top { padding: 0 0 6px; }
+    h1 { font-size: 24px; margin: 0; }
+    .role { font-size: 12px; margin: 0 0 4px; }
+    .contact { font-size: 10.5px; gap: 2px 12px; }
+    .eyebrow { display: none; }
+    section { padding: 8px 0 0; }
+    h2 { font-size: 13px; margin: 0 0 4px; text-transform: uppercase; letter-spacing: .06em;
+         border-bottom: 1px solid #999; padding-bottom: 2px; }
+    .summary { font-size: 10.5px; }
+    .card { border: none; padding: 0 0 6px; margin: 0; break-inside: avoid; }
+    .item-head h3 { font-size: 11.5px; }
+    .meta, .org { font-size: 10px; }
+    .org { margin: 0 0 2px; }
+    ul { margin: 2px 0 0; padding-left: 15px; }
+    li { margin: 1px 0; }
+    .skills { display: block; }
+    .skills > div { margin-bottom: 3px; }
+    .skills h3 { display: inline; font-size: 10.5px; color: #000; }
+    .skills h3::after { content: ": "; }
     a { color: #000; }
   }
 </style>
@@ -121,7 +137,7 @@
     <p class="role">Catching scams before they cost people money</p>
     <div class="contact">
       <span>Apple Valley, CA</span>
-      <a href="mailto:jeffreyisdavid@gmail.com">jeffreyisdavid@gmail.com</a>
+      <a href="mailto:jeffreyesdavid@gmail.com">jeffreyesdavid@gmail.com</a>
       <a href="https://github.com/jeffreyesdavid">GitHub</a>
       <a href="https://www.linkedin.com/in/jeffreyisdavid/">LinkedIn</a>
       <a href="https://tryhackme.com/p/gahtomahiko">TryHackMe</a>
@@ -147,22 +163,64 @@
     <h2>Summary</h2>
     <div class="card">
       <p class="summary" style="margin:0">
-        Aspiring fraud and security analyst with 4+ years of operations leadership in a heavily regulated industry,
+        Aspiring fraud, SOC and security analyst, bilingual in English and Spanish, with 4+ years of operations leadership in a heavily regulated industry,
         where I verified licenses and compliance paperwork for 100+ vendor brands and led teams of up to 26.
-        I'm now building hands-on security tools, including <a href="https://github.com/jeffreyesdavid/tx-guard">tx-guard</a>,
-        which detects crypto scams and wallet-draining transactions before they're signed, and <a href="https://github.com/jeffreyesdavid/vpn-guardian">VPN Guardian</a>, a monitoring agent that catches VPN drops and leaks and explains them with local AI.
+        I build open-source detection tools in my Guardian series, including <a href="https://github.com/jeffreyesdavid/ai-guardian">ai-guardian</a>, which finds the AI agents on a machine and flags what they can access,
+        and <a href="https://github.com/jeffreyesdavid/php-guardian">php-guardian</a>, shipped the day after a CISA critical-vulnerability alert. Open to fraud, SOC and security analyst roles, remote or Southern California.
       </p>
       <div class="stats">
+        <div class="stat"><b>6</b><span>open-source security tools shipped</span></div>
+        <div class="stat"><b>97</b><span>automated tests across my tools</span></div>
         <div class="stat"><b>100+</b><span>vendor brands verified for compliance</span></div>
         <div class="stat"><b>16 → 26</b><span>driver team scaled (+63%)</span></div>
-        <div class="stat"><b>2,500+</b><span>scam addresses checked by tx-guard</span></div>
-        <div class="stat"><b>37</b><span>automated tests in tx-guard</span></div>
       </div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Security Projects</h2>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/ai-guardian">ai-guardian</a>: Shadow AI Agent Scanner</h3>
+        <span class="meta">Oct 2026</span>
+      </div>
+      <ul>
+        <li>Free, local scanner that discovers the AI agents on a machine (AI apps, coding agents, browser extensions, local model servers, and MCP servers that connect agents to files and accounts) and maps what each one can access.</li>
+        <li>Flags risky setups: API keys stored in plain text, agents with access to the whole drive or SSH keys, permission prompts turned off, unpinned or unencrypted MCP servers, and local AI servers exposed to the network.</li>
+        <li>Brings the discover-and-map model of enterprise AI agent security (e.g. CrowdStrike Falcon Guardian) to individuals and small businesses. Read-only, with every secret masked in output.</li>
+        <li>First scan of my own laptop found 16 AI agents; that real-world run exposed 3 bugs that synthetic tests missed, which I fixed and covered with regression tests (23 tests total).</li>
+        <li><strong>Project page:</strong> <a href="https://jeffreyesdavid.github.io/ai-guardian/">jeffreyesdavid.github.io/ai-guardian</a></li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">AI security</span><span class="tag">MCP / AI agents</span><span class="tag">Secrets detection</span><span class="tag">Least privilege</span><span class="tag">Unit testing</span></div>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/php-guardian">php-guardian</a>: php2shell Exposure Scanner</h3>
+        <span class="meta">Oct 2026</span>
+      </div>
+      <ul>
+        <li>Built the day after CISA warned of "php2shell" (CVE-2026-109618 / CVE-2026-109619), critical PHP flaws allowing unauthenticated remote code execution.</li>
+        <li>Automates CISA's first step, asset inventory: finds PHP installs in common hiding spots and flags vulnerable, patched, and end-of-life versions against the fixed releases.</li>
+        <li>JSON output and exit codes so results can feed a SIEM, cron job, or CI pipeline. Read-only, with no exploit code; 16 boundary tests.</li>
+        <li><strong>Project page:</strong> <a href="https://jeffreyesdavid.github.io/php-guardian/">jeffreyesdavid.github.io/php-guardian</a></li>
+      </ul>
+      <div class="tags"><span class="tag">Bash</span><span class="tag">Vulnerability management</span><span class="tag">CVE response</span><span class="tag">CISA guidance</span><span class="tag">JSON / SIEM</span></div>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/wifi-guardian">Wi-Fi Guardian</a>: Evil Twin &amp; Look-alike Wi-Fi Detection</h3>
+        <span class="meta">Oct 2026</span>
+      </div>
+      <ul>
+        <li>macOS tool that spots fake Wi-Fi before you join it: evil twins (same name, weaker security), unknown access points, look-alike names (homoglyphs, hidden characters, "FREE WiFi" bait), and router identity changes that point to ARP spoofing.</li>
+        <li>Wrote a small Swift helper because macOS hides Wi-Fi names from apps without Location permission; 11 detection tests.</li>
+        <li>Runnable attack demo uses a simulated network, so my real network name, router MAC, and location stay out of the public repo.</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Swift (CoreWLAN)</span><span class="tag">Wireless security</span><span class="tag">ARP spoof detection</span><span class="tag">Unit testing</span></div>
+    </div>
 
     <div class="card">
       <div class="item-head">
@@ -192,6 +250,18 @@
         <li><strong>Project site:</strong> <a href="https://jeffreyesdavid.github.io/vpn-guardian/">jeffreyesdavid.github.io/vpn-guardian</a>, with a live check of what websites can see about the visitor.</li>
       </ul>
       <div class="tags"><span class="tag">Bash</span><span class="tag">Network security</span><span class="tag">VPN / routing</span><span class="tag">Local AI (Ollama)</span><span class="tag">macOS</span></div>
+    </div>
+
+    <div class="card">
+      <div class="item-head">
+        <h3><a href="https://github.com/jeffreyesdavid/beat-guard">beat-guard</a>: Beat Fingerprinting &amp; Theft Detection</h3>
+        <span class="meta">Oct 2026</span>
+      </div>
+      <ul>
+        <li>Python tool that fingerprints music producers' beats, timestamps them on Bitcoin as proof of ownership, and finds them inside other songs, even under vocals, compression, or a sped-up disguise.</li>
+        <li>Outputs a shareable evidence report; 10 end-to-end tests.</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Audio fingerprinting</span><span class="tag">SHA-256</span><span class="tag">Evidence reporting</span></div>
     </div>
 
     <div class="card">
@@ -281,11 +351,15 @@
     <div class="card skills">
       <div>
         <h3>Security</h3>
-        Scam and fraud pattern detection · Transaction risk analysis · Incident response · Credential hygiene and least privilege · Threat-intelligence lists
+        Scam and fraud pattern detection · Transaction risk analysis · Incident response · Vulnerability management and CVE response · AI agent security (MCP) · Wireless threat detection · Secrets detection · Credential hygiene and least privilege · Threat-intelligence lists
       </div>
       <div>
         <h3>Technical</h3>
-        Python · Git and GitHub · REST and JSON-RPC APIs · Ethereum fundamentals · Automated testing · Command line
+        Python · Bash · Swift basics · Git and GitHub · GitHub Pages · REST and JSON-RPC APIs · JSON for SIEM ingestion · Local AI (Ollama) · Ethereum fundamentals · Automated testing · macOS and Linux command line
+      </div>
+      <div>
+        <h3>Languages</h3>
+        English · Spanish (bilingual)
       </div>
       <div>
         <h3>Operations &amp; Compliance</h3>
@@ -301,6 +375,10 @@
     </div>
     <div class="card">
       <div class="item-head"><h3>Google Analytics · Google Ads · Meta Blueprint · HubSpot</h3><span class="meta">Completed</span></div>
+    </div>
+    <div class="card">
+      <div class="item-head"><h3>Victor Valley College</h3><span class="meta">Currently enrolled</span></div>
+      <div class="org" style="margin-bottom:0">Victorville, CA</div>
     </div>
     <div class="card">
       <div class="item-head"><h3>Music Production Program</h3></div>
